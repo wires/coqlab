@@ -2,6 +2,23 @@ Require Import abstract_algebra.
 
 (** * Formalizing categories *)
 
+Require Import theory.categories.
+
+(** basic properties *)
+Section basics.
+Context `{Category A}.
+
+(* An arrow [f:a ⟶ b] is an isomorphism when there is an arrow
+ [g:b ⟶ a] such that $g ∘ f = 1_a$ and $f ∘ g = 1_b$. In math-classes
+ this is defined as ([theory.categories]):
+
+     Definition iso_arrows {x y: X} (a: x ⟶ y) (b: y ⟶ x): Prop
+      := a ◎ b = cat_id ∧ b ◎ a = cat_id. (* todo: product *)
+
+ Lets proof that if [g] and [g'] are both inverses of [f], then [g = g'].
+*)
+
+
 (** ** Monoids
 
  We start with the natural numbers formalized as
