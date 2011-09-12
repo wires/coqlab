@@ -61,6 +61,11 @@ Instance nat_as_Monoid : Category unit.
 Qed.
 
 (*
+  Check Ken's code for more examples of categories
+  https://github.com/kenmad/math-classes/blob/master/src/msos/label_wo.v
+*)
+
+(*
 
 Class Graph N `{Arrows N} `{∀ x y : N, Equiv (x ⟶ y)} : Prop :=
   arrow_equiv :> ∀ x y, Setoid (x ⟶ y).
